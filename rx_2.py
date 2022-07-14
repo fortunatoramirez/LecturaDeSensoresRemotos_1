@@ -4,6 +4,7 @@ import matplotlib.animation as animation
 from socketIO_client import SocketIO
 import threading
 
+IP_SERVER = 'ip.del.ser.vidor'
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)
 xs = []
@@ -22,7 +23,7 @@ def rutina(*args):
 def wsthread(xs,ys):
     # Conectando al socket del Servidor
     print("Conectando al Servidor...")
-    socketIO = SocketIO('201.174.122.202',5001)
+    socketIO = SocketIO(IP_SERVER,5001)
     print("Conectado al Servidor.")
     socketIO.on('arduino', rutina)
     socketIO.wait()
