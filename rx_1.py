@@ -1,8 +1,9 @@
 from socketIO_client import SocketIO
 
+IP_SERVER = 'ip.del.ser.vidor'
 # Conectando al socket del Servidor
 print("Conectando al Servidor...")
-socketIO = SocketIO('ip.del.ser.vidor',5001)
+socketIO = SocketIO(IP_SERVER,5001)
 print("Conectado al Servidor.")
 
 def rutina(*args):
