@@ -2,8 +2,10 @@ from socketIO_client import SocketIO
 import serial
 import time
 
+IP_SERVER = 'ip.del.ser.vidor'
+
 print("Comenzando...")
-socketIO = SocketIO('201.174.122.202', 5001)
+socketIO = SocketIO(IP_SERVER, 5001)
 print("Conectado al servidor.")
 
 print("Conectando al Arduino...")
